@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1>Registro</h1>
+            <form action="/registro" method="POST">
+                <div class="mb-3">
+                    <label for="usernameInput" class="form-label">Nombre de usuario</label>
+                    <input type="text" id="usernameInput" name="username" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Contraseña</label>
+                    <input type="password" id="passwordInput" name="userPwd" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">Correo electrónico</label>
+                    <input type="email" id="emailInput" name="email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="birthInput" class="form-label">Fecha de nacimiento</label>
+                    <input type="date" id="birthInput" name="birth" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="sexInput" class="form-label">Sexo</label>
+                    <select name="sex" id="sexInput" class="form-select">
+                        <option value="male">Hombre</option>
+                        <option value="female">Mujer</option>
+                        <option value="other">Otro/a</option>
+                    </select>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-dark block"> Regístrate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

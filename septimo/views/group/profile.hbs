@@ -1,0 +1,29 @@
+<div class="card" style="width: 18rem;">
+    <img src="{{group.imageURL}}" class="card-img-top" alt="groupimage">
+    <div class="card-body">
+        <h1 class="card-title">{{group.groupName}}</h1>
+        {{#each group.messages}}
+        <p class="card-text">Título: {{title}}</p>
+        <p class="card-text">Mensaje: {{message}}</p>
+        {{/each}}
+    </div>
+    <form class="list-group list-group-flush" action="/grupos/mensaje/nuevo/{{group.id}}" method="post">
+        <label class="list-group list-group-flush" for="titleInput">Título
+            <input class="list-group list-group-flush" type="text" name="title">
+        </label>
+
+        <textarea class="list-group list-group-flush" name="message" id="messageInput" cols="30" rows="10"
+            placeholder="Introduce tu mensaje"></textarea>
+        <button class="btn btn-dark">Crear</button>
+
+    </form>
+
+    {{#each group.users}}
+    {{username}}
+    <form class="list-group list-group-flush" action="/perfil/nuevoamigo/{{id}}/{{./../group.id}}" method="post">
+        <button class="btn btn-dark">Añadir amig@ </button>
+
+    </form>
+    {{/each}}
+
+</div>

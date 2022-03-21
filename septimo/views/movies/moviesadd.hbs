@@ -1,0 +1,16 @@
+<div class="container">
+    <form class="d-flex" action="/buscar-pelicula" method="post">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    <div id="movies">
+        <div class="row">
+            {{#each results}}
+             {{>movieCardAdd}}
+            {{/each}}
+        </div>
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/script.js"></script>

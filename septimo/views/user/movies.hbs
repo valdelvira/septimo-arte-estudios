@@ -1,0 +1,20 @@
+<div class="container">
+
+    <form class="d-flex" action="/buscar-pelicula" method="post">
+        <input class="form-control me-2" type="search" id="inputSearch" placeholder="Search" name="query"
+            aria-label="Search">
+        <button class="btn btn-outline-success">Buscar</button>
+    </form>
+
+    <div id="moviesPrivatePanel">
+        <div class="row">
+
+            {{#each results}}
+
+            {{>movieCard}}
+
+            {{/each}}
+        </div>
+
+    </div>
+</div>

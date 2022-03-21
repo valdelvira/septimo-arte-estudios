@@ -1,0 +1,20 @@
+<div class="container" id="home">
+    <h1>{{appTitle}}</h1>
+    <p>Bienvenid@s a Septimo arte estudios</p>
+    <form class="d-flex" action="/buscar" method="post">
+        <input class="form-control me-2" type="search" id="inputSearch" placeholder="Search" name="query"
+            aria-label="Search">
+        <button class="btn btn-outline-success">Buscar</button>
+    </form>
+    <div id="moviesPanel">
+        <div class="row">
+
+            {{#each results}}
+
+            {{>movieCard}}
+
+            {{/each}}
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

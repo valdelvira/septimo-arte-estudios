@@ -1,0 +1,14 @@
+<ul>
+    <li>{{username}}</li>
+    <li>{{email}}</li>
+    <li>{{birth}}</li>
+    <li>{{sex}}</li>
+    <li>{{imageURL}}</li>
+
+    <form action="/perfil/editar/{{id}}" method="POST">
+        <button class="btn btn-dark">Editar</button>
+    </form>
+    <form action="/perfil/borrar/{{id}}" method="POST">
+        <button class="btn btn-dark">Borrar</button>
+    </form>
+</ul>

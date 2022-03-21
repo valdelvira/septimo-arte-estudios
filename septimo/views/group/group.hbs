@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1>Grupos</h1>
+            <form action="/grupos/crear" method="POST">
+                <div class="mb-3">
+                    <label for="groupNameInput" class="form-label">Nombre del grupo</label>
+                    <input type="text" id="groupInput" name="groupName" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="imageURLInput" class="form-label">Foto del grupo</label>
+                    <input type="file" id="imageURLInput" name="imageURL" class="form-control">
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-dark block">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

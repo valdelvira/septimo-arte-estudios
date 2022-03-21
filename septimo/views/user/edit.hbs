@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1>Editar</h1>
+            <form action="/perfil/editar/{{user.id}}" enctype="multipart/form-data" method="POST">
+                <div class="mb-3">
+                    <label for="usernameInput" class="form-label">Nombre de usuario</label>
+                    <input type="text" id="usernameInput" name="username" class="form-control" value={{user.username}}>
+                </div>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Contraseña</label>
+                    <input type="password" id="passwordInput" name="password" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">Correo electrónico</label>
+                    <input type="email" id="emailInput" name="email" class="form-control" value={{user.email}}>
+                </div>
+                <div class="mb-3">
+                    <label for="birthInput" class="form-label">Fecha de nacimiento</label>
+                    <input type="date" id="birthInput" name="birth" class="form-control" value={{birth}}>
+                </div>
+                <div class="mb-3">
+                    <label for="sexInput" class="form-label">Sexo</label>
+                    <select name="sex" id="sexInput" class="form-select" value={{user.sex}}>
+                        <option value="male">Hombre</option>
+                        <option value="female">Mujer</option>
+                        <option value="other">Otro/a</option>
+                    </select>
+                    <div class="mb-3">
+                        <label for="imageURL" class="form-label">Subir foto</label>
+                        <input type="file" id="imageURL" name="imageFile" class="form-control">
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-dark block"> Editar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

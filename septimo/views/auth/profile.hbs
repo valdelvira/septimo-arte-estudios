@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-4">
+
+        <div class="card" style="width: 18rem;">
+            <img src="{{user.imageURL}}" class="card-img-top" alt="imagen de usuari@">
+            <div class="card-body">
+                <h5 class="card-title">Datos de usuario</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Nombre del usuario: {{user.username}}</li>
+                <li class="list-group-item">Fecha de nacimiento: {{user.birth}}</li>
+                <li class="list-group-item">Género: {{user.sex}}</li>
+            </ul>
+
+            <div class="card-body d-grid gab-2">
+
+                <form class="block" action="/perfil/editar/{{user.id}}">
+                    <button type="submit" class="btn btn-dark block mt-3">Editar</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="row">
+
+        {{#each  moviesData}}
+            {{>movieCard}} 
+        {{/each}}
+        </div>
+    </div>
+</div>
+</div>
